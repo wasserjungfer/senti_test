@@ -1,0 +1,113 @@
+I GermanPolarityClues (Autoren: Ulli Waltinger, Bielefeld 2011)
+
+1. GermanPolarityClues is a semi-automatic translation approach of existing English-based sentiment resources to the German language by means of three different datasets:
+1.1 Translation of the Subjectivity Clues dictionary (Wiebe et al., 2005). Beispiel (GermanSubjektivityClues-Negative-220311):
+Wort(\t)  Lemmata(\t) Part-of-Speech(\t)  PositiveRating(\t)  NegativeRating(\t)  NeutralRating(\t)  PositiveCorpusProbability(\t)  NegativeCorpusProbability(\t) NeutralCorpusProbability
+Abandon	Abandon	NN	0	1	0	-	-	-
+Abart	Abart	NN	0	1	0	-	-	-
+Abbau	Abbau	NN	0	1	0	1	0	0
+Abbild	Abbild	NN	0	1	0	-	-	-
+Abbildungsfehler	Abbildungsfehler	NN	0	1	0	-	-	-
+Abbildverzerrung	Abbildverzerrung	NN	0	1	0	-	-	-
+Abblendung	Abblendung	NN	0	1	0	-	-	-
+Abbohrung	Abbohrung	NN	0	1	0	-	-	-
+Abbruch	Abbruch	NN	0	1	0	0.428571	0.285714	0.285714
+1.2 Translation of the of SentiSpin dictionary (Takamura et al., 2005). Beispiel (GermanSentiSpin-Negative-220311):
+Wort(\t)  Lemmata(\t) Part-of-Speech(\t)  PositiveRating(\t)  NegativeRating(\t)  NeutralRating(\t)  PositiveCorpusProbability(\t)  NegativeCorpusProbability(\t) NeutralCorpusProbability
+Aasfresser	Aasfresser	NN	0	0.0914923	0	-	-	-
+Aasgeier	Aasgeier	NN	0	0.0599141	0	-	-	-
+Aaskrähe	Aaskrähe	NE	0	0.0499018	0	-	-	-
+Aaskäfer	Aaskäfer	NN	0	0.0499018	0	-	-	-
+Aasseite	Aasseite	NN	0	0.0563869	0	-	-	-
+Abachi	Abachi	NN	0.00349525	0.000605852	0	-	-	-
+Abachi-Baum	Abachi-Baum	NN	0.00349525	0.000605852	0	-	-	-
+Abandon	Abandon	NN	0	1	0	-	-	-
+1.3 GermanPolarityClues dictionary - as an extension of the Subjectivity Clues (Waltinger, 2010). Beispiel (GermanPolarityClues-Negative-220311): 
+Wort(\t)  Lemmata(\t) Part-of-Speech(\t)  PositiveRating(\t)  NegativeRating(\t)  NeutralRating(\t)  PositiveCorpusProbability(\t)  NegativeCorpusProbability(\t) NeutralCorpusProbability
+impfte	impfen	VVFIN	0	1	0	-	-	-
+implausibel	implausibel	ADJD	0	1	0	-	-	-
+implodieren	implodieren	ADJD	0	1	0	-	-	-
+implodiert	implodiert	ADJD	0	1	0	0	0	1
+impotent	impotent	ADJD	0	1	0	-	-	-
+impulsiv	impulsiv	ADJD	0	1	0	-	-	-
+inadäquat	inadäquat	ADJD	0	1	0	-	-	-
+inaktiv	inaktiv	ADJD	0	1	0	0	0	1
+inakzeptabel	inakzeptabel	ADJD	0	1	0	0.1	0.9	0
+indefinit	indefinit	XY	0	1	0	-	-	-
+indifferent	indifferent	ADJD	0	1	0	-	-	-
+indigniert	indigniert	ADJD	0	1	0	-	-	-
+
+GermanPolarityClues erweitert (Autoren: Ulli Waltinger, Bielefeld 2012)
+GermanPolarityClues dictionary 2012, Beispiel (GermanPolarityClues-Negative-21042012):
+Wort(\t)     Lemma(\t)  Part-of-Speech(\t)  Polarity(\t)  Probability(\t)
+Alterung	Alterung	NN	negative	-/-/-	D
+Altlast	Altlast	NN	negative	-/-/-	D
+Altstoff	Altstoff	NN	negative	-/-/-	D
+Altweibergeschwätz	Altweibergeschwätz	NN	negative	-/-/-	D
+Amateur	Amateur	NN	negative	-/-0.0048/-	L
+
+II Multi-Domain Sentiment Lexicon for German (Hochschule Darmstadt)
+The project was supervised by Prof. Dr. Melanie Siegel.
+Approach: Sentiment terms were extracted from the MLSA corpus[1] and the pressrelations dataset[2], together with their polarities.
+The average polarity for each term was computed, separately for each data source. In addition, contents of SentiWS[3] were added for evaluation purposes.
+  <entry>
+    <term>kulturell</term>
+    <opinion source="pressrelease dataset" polarity="0.6" />
+    <opinion source="MLSA" polarity="0.0" />
+  </entry>
+  <entry>
+    <term>filmisch</term>
+    <opinion source="pressrelease dataset" polarity="1.0" />
+  </entry>
+  <entry>
+    <term>wesentlich</term>
+    <opinion source="pressrelease dataset" polarity="0.5" />
+  </entry>
+
+III SentimentWortschatz (Universität Leipzig)
+It lists positive and negative polarity bearing words weighted within the interval of [-1; 1] plus their part of speech tag, and if applicable, their inflections.
+The current version of SentiWS (v1.8b) contains 1,650 positive and 1,818 negative words.
+Beispiel ()
+<Word>|<POS tag>(\t) <Polarity weight>(\t) <Infl_1>,...,<Infl_k>
+Schuld|NN	-0.9686	Schulden
+Schuldner|NN	-0.0048	Schuldnern,Schuldners
+Schuldnerin|NN	-0.0048	Schuldnerinnen
+Schurke|NN	-0.3306	Schurken
+Schwierigkeit|NN	-0.0483	Schwierigkeiten
+
+IV "Data and supplementary information for Ranlp 2017 paper on "Evaluating the morphological compositionality of polarity", Josef Ruppenhofer 
+There are three different data sets that are used in the experiments of the above mentioned paper:
+- The main data set which derives from the combination of PolArt and CELEX.
+It combines (i)  words from PolArt for which a morphological parse existed in CELEX with (ii) additional words taken from CELEX for which we added polarity annotations. The new words from CELEX were added so as to have a more sizable  share of the neutral class in the overall data set.
+The main data set is split up into a train/test part (8400 items) and a dev(elopment) part (900) items.
+train_test_lemma_polarity.txt - polarity annotations for the lemmas of the train/test set
+wiktionary_lemma_polarity.txt - polarity annotations for the lemmas taken from Wiktionary
+wortwarte_lemma_polarity.txt-  polarity annotations for the lemmas taken from Wortwarte
+Beispiel (wiktionary_lemma_polarity.txt)
+Wort_POS(\t) Polarity
+Aasjägerei_N	NEG
+Gurkentruppe_N	NEG
+Stinktier_N	NEG
+runterrocken_N	NEG
+Halbdackel_N	NEG
+Schimpfwort_N	NEG
+Schundroman_N	NEG
+Putzfimmel_N	NEG
+Scheißhaus_N	NEG
+Dummkopf_N	NEG
+
+
+V Institute of Computational Linguistics, University of Zurich, Switzerland
+Polarity lexicon: Nouns, Adjectives, Verbs, Adverbs
+Authors: Manfred Klenner, Simon Clematide, Martin Wiegand, Ronny Peters
+Version: 1.1. 2010/08/01
+Format
+Word {NEG|POS|NEU|SHI|INT}=PolarityStrength PoS
+Beispiel:
+abgerissen NEG=1
+marktbeherrschend POS=1
+spinnen NEG=0.7
+unausgebildet NEG=0.7
+untersagen NEG=1
+hirnlos NEG=1
+verstohlen NEG=1
